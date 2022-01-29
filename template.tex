@@ -1,0 +1,96 @@
+\documentclass[a4paper,12pt,article]{memoir}
+
+\setlrmarginsandblock{1cm}{*}{1}
+\setulmarginsandblock{2cm}{*}{1}
+\checkandfixthelayout[nearest]
+\setlength{\parindent}{0pt}
+
+\usepackage[utf8]{inputenc}
+\usepackage[norwegian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, bm, mathtools, mathdots}
+\usepackage[normalem]{ulem}
+\usepackage{array, booktabs, tabularx}
+\usepackage{graphicx, caption, subfig, xcolor}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{listings}
+
+\captionsetup{font=small,labelfont=bf}
+
+\makepagestyle{mypagestyle}
+\copypagestyle{mypagestyle}{empty}
+\makeoddhead{mypagestyle}{TDT4310, Spring 2022\\Lab date: January 18, 2022}{\quad}{Prof. Björn Gambäck\\TA. Tollef Jørgensen\\}
+\makeheadrule{mypagestyle}{\textwidth}{\normalrulethickness}
+\makeoddfoot{mypagestyle}{}{\thepage~of~\thelastpage}{} 
+
+\pagestyle{mypagestyle}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{text}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{code}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{text},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=true,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=4
+}
+\lstset{style=code}
+%\lstset{escapeinside={<}{>}}
+
+\begin{document}
+
+\begin{center}
+\Large{\textbf{Lab 1 -- Corpora and Text Processing}}
+\\
+\large{\textbf{Name Nameson, your-ntnu-username}}
+\end{center}
+
+\section*{Instructions}
+Here you could write some instructions required for running the code if necessary, such as modules used etc.
+\section*{Exercises}
+\subsection{1 - Some exercise here}
+this is the layout for tasks
+\subsubsection{A subsubsection}
+categorize on even smaller sections within exercises.
+Code can be written using lstlisting:
+\begin{lstlisting}[language=Python]
+def times_five(x):
+    return x * 5
+\end{lstlisting}
+
+\begin{itemize}
+    \item this is a normal list
+    \item this is a normal list
+    \item this is a normal list
+\end{itemize}
+
+\begin{enumerate}\itemsep0em
+    \item this is a compact list with enumeration
+    \item this is a compact list with enumeration
+    \item this is a compact list with enumeration
+\end{enumerate}
+
+\begin{enumerate}[label=(\alph*)]\itemsep0em
+    \item this is a compact list with a, b, c
+    \item this is a compact list with a, b, c
+    \item this is a compact list with a, b, c
+\end{enumerate}
+
+\end{document}
